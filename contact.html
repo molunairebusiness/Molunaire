@@ -3,27 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Molunaire</title>
+    <title>Contact - Mijn Bedrijf</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
-        <h1>Contact</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="diensten.html">Diensten</a>
-            <a href="over.html">Over Ons</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+        <div class="container">
+            <h1>Contact</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="diensten.html">Diensten</a>
+                <a href="over.html">Over Ons</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
     </header>
 
-    <section>
+    <section class="container">
         <h2>Neem contact op</h2>
-        <p>Stuur een e-mail naar <a href="mailto:molunairebusiness@gmail.com">molunairebusiness@gmail.com</a> of bel 06-10358190.</p>
+        <p>Wil je een website laten maken of heb je vragen? Stuur een bericht of bel ons direct.</p>
+
+        <ul>
+            <li>Email: <a href="mailto:info@mijnbedrijf.com">info@mijnbedrijf.com</a></li>
+            <li>Telefoon: 012-3456789</li>
+            <li>Adres: Straatnaam 1, 1234 AB Plaatsnaam</li>
+        </ul>
+
+        <button onclick="showMessage()">Stuur een bericht</button>
     </section>
 
     <footer>
-        &copy; 2025 Molunaire
+        <div class="container">
+            &copy; 2025 Mijn Bedrijf | <a href="index.html">Home</a>
+        </div>
     </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
+
