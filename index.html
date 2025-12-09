@@ -3,27 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moluniare - Home</title>
+    <title>Molunaire - Home</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
-        <h1>Wij bouwen websites die jouw bedrijf laten groeien</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="diensten.html">Diensten</a>
-            <a href="over.html">Over Ons</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+        <div class="container">
+            <h1>Wij bouwen websites die jouw bedrijf laten groeien</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="diensten.html">Diensten</a>
+                <a href="over.html">Over Ons</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
     </header>
 
-    <section>
-        <h2>Onze Diensten</h2>
-        <p>Wij maken professionele websites voor bedrijven van elke grootte.</p>
+    <section class="hero">
+        <div class="container">
+            <h2>Professioneel, snel en betrouwbaar</h2>
+            <p>Van concept tot live website: wij helpen jouw bedrijf online succes te behalen.</p>
+            <button onclick="showMessage()">Neem contact op</button>
+        </div>
+    </section>
+
+    <section class="features container">
+        <div class="feature">
+            <h3>Webdesign</h3>
+            <p>Moderne, responsive ontwerpen die indruk maken op klanten.</p>
+        </div>
+        <div class="feature">
+            <h3>Development</h3>
+            <p>Snelle, stabiele en veilige websites met de nieuwste technologieën.</p>
+        </div>
+        <div class="feature">
+            <h3>SEO & Marketing</h3>
+            <p>Zorg dat jouw website gevonden wordt door klanten en groeit in bezoekers.</p>
+        </div>
     </section>
 
     <footer>
-        &copy; 2025 Mijn Bedrijf
+        <div class="container">
+            &copy; 2025 Mijn Bedrijf | <a href="contact.html">Contact</a>
+        </div>
     </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
+
