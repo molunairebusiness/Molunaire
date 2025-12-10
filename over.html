@@ -1,40 +1,118 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Over Ons - Mijn Bedrijf</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Over Ons • Mijn Bedrijf</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Over Ons</h1>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="diensten.html">Diensten</a>
-                <a href="over.html">Over Ons</a>
-                <a href="contact.html">Contact</a>
-            </nav>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div class="tagline">Trusted by enterprise clients</div>
+      <div class="contact-short">Bel: <a href="tel:+31123456789">+31 12 345 6789</a></div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="images/logo.png" alt="Logo" class="logo" onerror="this.style.display='none'">
+        <div class="brand-text">
+          <div class="brand-name">Mijn Bedrijf</div>
+          <div class="brand-sub">Digital Experiences • Growth</div>
         </div>
-    </header>
+      </div>
 
-    <section class="container">
-        <h2>Wie wij zijn</h2>
-        <p>Wij zijn een team van ervaren webprofessionals die bedrijven helpen groeien via het internet.  
-           Met onze kennis in design, development en marketing bouwen wij websites die werken en converteren.</p>
+      <nav class="main-nav" id="mainNav">
+        <a href="index.html">Home</a>
+        <a href="diensten.html">Diensten</a>
+        <a href="over.html" class="active">Over Ons</a>
+        <a href="contact.html">Contact</a>
+        <button class="btn-primary" onclick="openContactModal()">Plan consult</button>
+      </nav>
 
-        <h2>Onze missie</h2>
-        <p>Wij geloven dat elk bedrijf een sterke online aanwezigheid verdient. Onze missie is om dit
-           bereikbaar te maken met professionele en betaalbare websites.</p>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <main class="container section">
+    <h1 class="page-title">Over Ons</h1>
+    <div class="about-grid">
+      <div>
+        <h2>Onze visie</h2>
+        <p>Wij geloven in digitale ervaringen die niet alleen mooi zijn, maar betekenisvolle groei opleveren. Onze projecten combineren design, techniek en data.</p>
+      </div>
+      <div>
+        <h2>Ons team</h2>
+        <p>Een mix van senior designers, software engineers en growth-specialisten met jaren ervaring bij bureaus en scale-ups.</p>
+      </div>
+    </div>
+
+    <section class="leadership">
+      <h3>Leadership</h3>
+      <div class="people-grid">
+        <div class="person">
+          <img src="images/person1.jpg" alt="CEO" onerror="this.style.display='none'">
+          <h4>Naam CEO</h4>
+          <p>CEO & Co-founder</p>
+        </div>
+        <div class="person">
+          <img src="images/person2.jpg" alt="CTO" onerror="this.style.display='none'">
+          <h4>Naam CTO</h4>
+          <p>CTO & Head of Engineering</p>
+        </div>
+        <div class="person">
+          <img src="images/person3.jpg" alt="CMO" onerror="this.style.display='none'">
+          <h4>Naam CMO</h4>
+          <p>Head of Growth</p>
+        </div>
+      </div>
     </section>
+  </main>
 
-    <footer>
-        <div class="container">
-            &copy; 2025 Mijn Bedrijf | <a href="contact.html">Contact</a>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>Mijn Bedrijf</h4>
+        <p>Premium digitale producten & services</p>
+      </div>
+      <div>
+        <h4>Snelle links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="diensten.html">Diensten</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>Email: <a href="mailto:info@mijnbedrijf.com">info@mijnbedrijf.com</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; 2025 Mijn Bedrijf</div>
+  </footer>
+
+  <div class="modal" id="contactModal" aria-hidden="true">
+    <div class="modal-inner">
+      <button class="modal-close" onclick="closeContactModal()" aria-label="Close">✕</button>
+      <h3>Contact opnemen</h3>
+      <form id="contactForm" onsubmit="return submitContactForm(event)">
+        <div class="form-row">
+          <input type="text" id="name3" name="name" placeholder="Naam *" required>
+          <input type="email" id="email3" name="email" placeholder="E-mail *" required>
         </div>
-    </footer>
+        <textarea id="message3" name="message" rows="5" placeholder="Bericht..." required></textarea>
+        <div class="form-actions">
+          <button type="submit" class="btn-primary">Verstuur</button>
+        </div>
+        <div id="formStatus" class="form-status" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+  </div>
 
-    <script src="js/script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
+
