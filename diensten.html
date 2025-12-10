@@ -1,167 +1,174 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Diensten • Mijn Bedrijf</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Diensten — Molunaire</title>
+  <meta name="description" content="Onze premium diensten: Design, Development, Branding, Content." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
+  <script src="js/script.js" defer></script>
 </head>
-<body>
-  <div class="topbar">
-    <div class="container topbar-inner">
-      <div class="tagline">Enterprise-grade oplossingen • SLA</div>
-      <div class="contact-short">Bel: <a href="tel:+31123456789">+31 12 345 6789</a></div>
-    </div>
-  </div>
-
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="brand">
-        <img src="images/logo.png" alt="Logo" class="logo" onerror="this.style.display='none'">
-        <div class="brand-text">
-          <div class="brand-name">Mijn Bedrijf</div>
-          <div class="brand-sub">Digital Experiences • Growth</div>
-        </div>
-      </div>
-
-      <nav class="main-nav" id="mainNav">
-        <a href="index.html">Home</a>
-        <a href="diensten.html" class="active">Diensten</a>
-        <a href="over.html">Over Ons</a>
-        <a href="contact.html">Contact</a>
-        <button class="btn-primary" onclick="openContactModal()">Plan consult</button>
-      </nav>
-
-      <button class="hamburger" id="hamburger" aria-label="Open menu">☰</button>
+<body data-theme="light">
+  <div id="transition-cover"></div>
+  <header class="navbar">
+    <a class="logo" href="index.html">Molunaire</a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="diensten.html" class="active">Diensten</a>
+      <a href="over.html">Over</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="theme-toggle" aria-label="Schakel thema"></button>
+      <button class="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
     </div>
   </header>
 
-  <main class="section container">
-    <h1 class="page-title">Onze Diensten — van strategie tot executie</h1>
+  <aside class="mobile-menu" aria-hidden="true">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="diensten.html" class="active">Diensten</a>
+      <a href="over.html">Over</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </aside>
 
-    <section class="service-detail-grid">
-      <article>
-        <h2>Strategie & Productontwikkeling</h2>
-        <p>Roadmaps, marktvalidatie en productdesign met KPI-focus.</p>
-        <ul>
-          <li>Product discovery</li>
-          <li>Go-to-market strategie</li>
-          <li>Roadmaps & MVP planning</li>
-        </ul>
-      </article>
-
-      <article>
-        <h2>Design & UX</h2>
-        <p>Branding, UX research en pixel-perfect interfaces.</p>
-        <ul>
-          <li>Design systems</li>
-          <li>Prototyping</li>
-          <li>A/B-testen & conversie-optimalisatie</li>
-        </ul>
-      </article>
-
-      <article>
-        <h2>Development & Integratie</h2>
-        <p>Headless, JAMstack of traditioneel — we kiezen wat schaalbaar is.</p>
-        <ul>
-          <li>API-architectuur</li>
-          <li>CI/CD en autoscaling</li>
-          <li>Payment & CRM integratie</li>
-        </ul>
-      </article>
-
-      <article>
-        <h2>Operations & Support</h2>
-        <p>Monitoring, backups, security en SLA ondersteuning.</p>
-        <ul>
-          <li>24/7 monitoring</li>
-          <li>Security audits</li>
-          <li>Managed hosting</li>
-        </ul>
-      </article>
+  <main>
+    <section class="page-header container">
+      <h1 class="reveal">Onze diensten</h1>
+      <p class="reveal delay-1">End‑to‑end: van strategie tot oplevering — premium all the way.</p>
     </section>
 
-    <section class="pricing">
-      <h2>Partnership tiers</h2>
-      <div class="pricing-grid">
-        <div class="pricing-card">
-          <h3>Scale</h3>
-          <p class="price">vanaf €2.500 / maand</p>
-          <ul>
-            <li>Dedicated account manager</li>
-            <li>Maandelijkse growth-sprints</li>
-            <li>Uptime SLA</li>
-          </ul>
+    <!-- Tabs -->
+    <section class="tabs container">
+      <div class="tab-controls">
+        <button class="tab-btn active" data-tab="design">Design</button>
+        <button class="tab-btn" data-tab="dev">Development</button>
+        <button class="tab-btn" data-tab="branding">Branding</button>
+        <button class="tab-btn" data-tab="content">Content</button>
+      </div>
+      <div class="tab-panels">
+        <div class="tab-panel active" id="design">
+          <div class="panel-grid">
+            <div class="panel-text">
+              <h3>Design systemen</h3>
+              <p>Component‑gedreven design, consistentie, en pixel‑perfect UI.</p>
+              <ul class="bullets">
+                <li>Design system & component library</li>
+                <li>Responsive & accessibility‑first</li>
+                <li>Motion & micro‑interacties</li>
+              </ul>
+            </div>
+            <img src="assets/design.jpg" alt="Design" loading="lazy" />
+          </div>
         </div>
-        <div class="pricing-card featured">
-          <h3>Enterprise</h3>
-          <p class="price">Op maat</p>
-          <ul>
-            <li>Custom engineering team</li>
-            <li>On-site workshops</li>
-            <li>Priority support & security</li>
-          </ul>
+        <div class="tab-panel" id="dev">
+          <div class="panel-grid">
+            <div class="panel-text">
+              <h3>Modern development</h3>
+              <p>Snelle laadtijden, SEO‑ready en schaalbaar.</p>
+              <ul class="bullets">
+                <li>Performance optimalisatie (LCP, CLS, TBT)</li>
+                <li>Headless CMS & JAMstack</li>
+                <li>CI/CD & QA pipelines</li>
+              </ul>
+            </div>
+            <img src="assets/dev.jpg" alt="Development" loading="lazy" />
+          </div>
         </div>
-        <div class="pricing-card">
-          <h3>Launch</h3>
-          <p class="price">vanaf €1.200</p>
-          <ul>
-            <li>Design & development</li>
-            <li>SEO baseline</li>
-            <li>2 maanden support</li>
-          </ul>
+        <div class="tab-panel" id="branding">
+          <div class="panel-grid">
+            <div class="panel-text">
+              <h3>Branding</h3>
+              <p>Merkidentiteit die luxe en vertrouwen uitstraalt.</p>
+              <ul class="bullets">
+                <li>Logo, kleuren, typografie</li>
+                <li>Tone of voice & guidelines</li>
+                <li>Social & campagne visuals</li>
+              </ul>
+            </div>
+            <img src="assets/branding.jpg" alt="Branding" loading="lazy" />
+          </div>
+        </div>
+        <div class="tab-panel" id="content">
+          <div class="panel-grid">
+            <div class="panel-text">
+              <h3>Content</h3>
+              <p>Fotografie, video en copy voor impact en conversie.</p>
+              <ul class="bullets">
+                <li>Storytelling & scripts</li>
+                <li>Photo/video producties</li>
+                <li>SEO content & landing pages</li>
+              </ul>
+            </div>
+            <img src="assets/content.jpg" alt="Content" loading="lazy" />
+          </div>
         </div>
       </div>
     </section>
 
-    <div class="cta-large">
-      <h3>Wil je meer weten? Plan een gratis discovery call.</h3>
-      <button class="btn-primary" onclick="openContactModal()">Plan een discovery</button>
-    </div>
+    <!-- Accordion -->
+    <section class="accordion container">
+      <h2>Veelgestelde vragen</h2>
+      <details class="reveal">
+        <summary>Wat maakt Molunaire premium?</summary>
+        <p>Detail, performance, en een cinematic ervaring die je brand sterker maakt.</p>
+      </details>
+      <details class="reveal delay-1">
+        <summary>Hoe lang duurt een traject?</summary>
+        <p>Tussen 4 en 12 weken, afhankelijk van scope en content.</p>
+      </details>
+      <details class="reveal delay-2">
+        <summary>Werken jullie met CMS?</summary>
+        <p>Ja, headless (bijv. Contentful, Sanity) of klassiek — wat jouw team nodig heeft.</p>
+      </details>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta container">
+      <div class="cta-card reveal">
+        <h3>Klaar voor de volgende stap?</h3>
+        <p>Laat ons jouw digitale flagship bouwen.</p>
+        <a href="contact.html" class="btn btn-primary magnetic">Plan een kennismaking</a>
+      </div>
+    </section>
   </main>
 
-  <footer class="site-footer">
+  <footer class="footer">
     <div class="container footer-grid">
       <div>
-        <h4>Mijn Bedrijf</h4>
-        <p>Premium digitale producten & services</p>
+        <h4>Molunaire</h4>
+        <p>Premium digitale experiences.</p>
       </div>
       <div>
-        <h4>Snelle links</h4>
+        <h4>Links</h4>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="over.html">Over ons</a></li>
+          <li><a href="diensten.html">Diensten</a></li>
+          <li><a href="over.html">Over</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
       <div>
         <h4>Contact</h4>
-        <p>Email: <a href="mailto:info@mijnbedrijf.com">info@mijnbedrijf.com</a></p>
+        <ul>
+          <li><a href="mailto:info@molunaire.com">info@molunaire.com</a></li>
+          <li>Venray, Limburg</li>
+        </ul>
       </div>
     </div>
-    <div class="footer-bottom">&copy; 2025 Mijn Bedrijf</div>
+    <div class="footer-bottom">
+      <span>&copy; 2025 Molunaire</span>
+      <div class="socials">
+        <a href="#">IG</a><a href="#">IN</a><a href="#">X</a>
+      </div>
+    </div>
   </footer>
 
-  <div class="modal" id="contactModal" aria-hidden="true">
-    <div class="modal-inner">
-      <button class="modal-close" onclick="closeContactModal()" aria-label="Close">✕</button>
-      <h3>Plan een discovery</h3>
-      <form id="contactForm" onsubmit="return submitContactForm(event)">
-        <div class="form-row">
-          <input type="text" id="name2" name="name" placeholder="Naam *" required>
-          <input type="email" id="email2" name="email" placeholder="E-mail *" required>
-        </div>
-        <textarea id="message2" name="message" rows="5" placeholder="Project korte omschrijving..." required></textarea>
-        <div class="form-actions">
-          <button type="submit" class="btn-primary">Verstuur</button>
-        </div>
-        <div id="formStatus" class="form-status" role="status" aria-live="polite"></div>
-      </form>
-    </div>
-  </div>
-
-  <script src="js/script.js"></script>
+  <div class="cursor"></div>
 </body>
 </html>
+
 
