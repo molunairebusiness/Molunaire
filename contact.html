@@ -1,44 +1,88 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Mijn Bedrijf</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact • Mijn Bedrijf</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Contact</h1>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="diensten.html">Diensten</a>
-                <a href="over.html">Over Ons</a>
-                <a href="contact.html">Contact</a>
-            </nav>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div class="tagline">Snel antwoord • Vertrouwelijke aanpak</div>
+      <div class="contact-short">Bel: <a href="tel:+31123456789">+31 12 345 6789</a></div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="images/logo.png" alt="Logo" class="logo" onerror="this.style.display='none'">
+        <div class="brand-text">
+          <div class="brand-name">Mijn Bedrijf</div>
+          <div class="brand-sub">Digital Experiences • Growth</div>
         </div>
-    </header>
+      </div>
 
-    <section class="container">
-        <h2>Neem contact op</h2>
-        <p>Wil je een website laten maken of heb je vragen? Stuur een bericht of bel ons direct.</p>
+      <nav class="main-nav" id="mainNav">
+        <a href="index.html">Home</a>
+        <a href="diensten.html">Diensten</a>
+        <a href="over.html">Over Ons</a>
+        <a href="contact.html" class="active">Contact</a>
+        <button class="btn-primary" onclick="openContactModal()">Plan consult</button>
+      </nav>
 
+      <button class="hamburger" id="hamburger" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <main class="container section">
+    <h1 class="page-title">Contact</h1>
+    <p class="lead">Vul onderstaand formulier in of bel ons direct. We reageren binnen 24 uur.</p>
+
+    <form id="contactFormPage" onsubmit="return submitContactForm(event)">
+      <div class="form-row">
+        <input type="text" id="namePage" name="name" placeholder="Naam *" required>
+        <input type="email" id="emailPage" name="email" placeholder="E-mail *" required>
+      </div>
+      <div class="form-row">
+        <input type="text" id="companyPage" name="company" placeholder="Bedrijfsnaam">
+        <input type="tel" id="phonePage" name="phone" placeholder="Telefoon">
+      </div>
+      <textarea id="messagePage" name="message" rows="6" placeholder="Wat wil je graag bespreken?" required></textarea>
+      <div class="form-actions">
+        <button type="submit" class="btn-primary">Verstuur bericht</button>
+      </div>
+      <div id="formStatusPage" class="form-status" role="status" aria-live="polite"></div>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>Mijn Bedrijf</h4>
+        <p>Premium digitale producten & services</p>
+      </div>
+      <div>
+        <h4>Snelle links</h4>
         <ul>
-            <li>Email: <a href="mailto:info@mijnbedrijf.com">info@mijnbedrijf.com</a></li>
-            <li>Telefoon: 012-3456789</li>
-            <li>Adres: Straatnaam 1, 1234 AB Plaatsnaam</li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="diensten.html">Diensten</a></li>
+          <li><a href="over.html">Over ons</a></li>
         </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>Email: <a href="mailto:info@mijnbedrijf.com">info@mijnbedrijf.com</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; 2025 Mijn Bedrijf</div>
+  </footer>
 
-        <button onclick="showMessage()">Stuur een bericht</button>
-    </section>
-
-    <footer>
-        <div class="container">
-            &copy; 2025 Mijn Bedrijf | <a href="index.html">Home</a>
-        </div>
-    </footer>
-
-    <script src="js/script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
+
+
 
