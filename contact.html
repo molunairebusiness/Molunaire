@@ -1,86 +1,119 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Contact • Mijn Bedrijf</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — Molunaire</title>
+  <meta name="description" content="Neem contact op met Molunaire voor een premium samenwerking." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
+  <script src="js/script.js" defer></script>
 </head>
-<body>
-  <div class="topbar">
-    <div class="container topbar-inner">
-      <div class="tagline">Snel antwoord • Vertrouwelijke aanpak</div>
-      <div class="contact-short">Bel: <a href="tel:+31123456789">+31 12 345 6789</a></div>
-    </div>
-  </div>
-
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="brand">
-        <img src="images/logo.png" alt="Logo" class="logo" onerror="this.style.display='none'">
-        <div class="brand-text">
-          <div class="brand-name">Mijn Bedrijf</div>
-          <div class="brand-sub">Digital Experiences • Growth</div>
-        </div>
-      </div>
-
-      <nav class="main-nav" id="mainNav">
-        <a href="index.html">Home</a>
-        <a href="diensten.html">Diensten</a>
-        <a href="over.html">Over Ons</a>
-        <a href="contact.html" class="active">Contact</a>
-        <button class="btn-primary" onclick="openContactModal()">Plan consult</button>
-      </nav>
-
-      <button class="hamburger" id="hamburger" aria-label="Open menu">☰</button>
+<body data-theme="light">
+  <div id="transition-cover"></div>
+  <header class="navbar">
+    <a class="logo" href="index.html">Molunaire</a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="diensten.html">Diensten</a>
+      <a href="over.html">Over</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="theme-toggle" aria-label="Schakel thema"></button>
+      <button class="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
     </div>
   </header>
 
-  <main class="container section">
-    <h1 class="page-title">Contact</h1>
-    <p class="lead">Vul onderstaand formulier in of bel ons direct. We reageren binnen 24 uur.</p>
+  <aside class="mobile-menu" aria-hidden="true">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="diensten.html">Diensten</a>
+      <a href="over.html">Over</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+  </aside>
 
-    <form id="contactFormPage" onsubmit="return submitContactForm(event)">
-      <div class="form-row">
-        <input type="text" id="namePage" name="name" placeholder="Naam *" required>
-        <input type="email" id="emailPage" name="email" placeholder="E-mail *" required>
+  <main>
+    <section class="page-header container">
+      <h1 class="reveal">Contact</h1>
+      <p class="reveal delay-1">Vertel ons over je project — we reageren snel.</p>
+    </section>
+
+    <section class="contact container">
+      <form id="contact-form" novalidate>
+        <div class="form-grid">
+          <div class="form-field">
+            <label for="name">Naam</label>
+            <input id="name" name="name" type="text" placeholder="Jouw naam" required />
+            <small class="error"></small>
+          </div>
+          <div class="form-field">
+            <label for="email">E‑mail</label>
+            <input id="email" name="email" type="email" placeholder="mail@domein.nl" required />
+            <small class="error"></small>
+          </div>
+          <div class="form-field full">
+            <label for="message">Bericht</label>
+            <textarea id="message" name="message" placeholder="Vertel kort wat je zoekt" rows="6" required></textarea>
+            <small class="error"></small>
+          </div>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary magnetic">Verstuur</button>
+          <div id="form-status" class="status" aria-live="polite"></div>
+        </div>
+      </form>
+    </section>
+
+    <section class="map full-bleed">
+      <div class="map-placeholder">
+        <p>Hier komt een kaart of foto (Venray, Limburg).</p>
       </div>
-      <div class="form-row">
-        <input type="text" id="companyPage" name="company" placeholder="Bedrijfsnaam">
-        <input type="tel" id="phonePage" name="phone" placeholder="Telefoon">
+    </section>
+
+    <section class="cta container">
+      <div class="cta-card reveal">
+        <h3>Niet zeker waar te beginnen?</h3>
+        <p>Plan een 30‑min intake — vrijblijvend.</p>
+        <a href="#" class="btn btn-ghost">Bekijk kalender</a>
       </div>
-      <textarea id="messagePage" name="message" rows="6" placeholder="Wat wil je graag bespreken?" required></textarea>
-      <div class="form-actions">
-        <button type="submit" class="btn-primary">Verstuur bericht</button>
-      </div>
-      <div id="formStatusPage" class="form-status" role="status" aria-live="polite"></div>
-    </form>
+    </section>
   </main>
 
-  <footer class="site-footer">
+  <footer class="footer">
     <div class="container footer-grid">
       <div>
-        <h4>Mijn Bedrijf</h4>
-        <p>Premium digitale producten & services</p>
+        <h4>Molunaire</h4>
+        <p>Premium digitale experiences.</p>
       </div>
       <div>
-        <h4>Snelle links</h4>
+        <h4>Links</h4>
         <ul>
-          <li><a href="index.html">Home</a></li>
           <li><a href="diensten.html">Diensten</a></li>
-          <li><a href="over.html">Over ons</a></li>
+          <li><a href="over.html">Over</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
       <div>
         <h4>Contact</h4>
-        <p>Email: <a href="mailto:info@mijnbedrijf.com">info@mijnbedrijf.com</a></p>
+        <ul>
+          <li><a href="mailto:info@molunaire.com">info@molunaire.com</a></li>
+          <li>Venray, Limburg</li>
+        </ul>
       </div>
     </div>
-    <div class="footer-bottom">&copy; 2025 Mijn Bedrijf</div>
+    <div class="footer-bottom">
+      <span>&copy; 2025 Molunaire</span>
+      <div class="socials">
+        <a href="#">IG</a><a href="#">IN</a><a href="#">X</a>
+      </div>
+    </div>
   </footer>
 
-  <script src="js/script.js"></script>
+  <div class="cursor"></div>
 </body>
 </html>
 
