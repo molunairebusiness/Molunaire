@@ -1,118 +1,165 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Over Ons • Mijn Bedrijf</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Over — Molunaire</title>
+  <meta name="description" content="Onze visie, waarden en team. Molunaire bouwt premium digitale experiences." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
+  <script src="js/script.js" defer></script>
 </head>
-<body>
-  <div class="topbar">
-    <div class="container topbar-inner">
-      <div class="tagline">Trusted by enterprise clients</div>
-      <div class="contact-short">Bel: <a href="tel:+31123456789">+31 12 345 6789</a></div>
-    </div>
-  </div>
-
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="brand">
-        <img src="images/logo.png" alt="Logo" class="logo" onerror="this.style.display='none'">
-        <div class="brand-text">
-          <div class="brand-name">Mijn Bedrijf</div>
-          <div class="brand-sub">Digital Experiences • Growth</div>
-        </div>
-      </div>
-
-      <nav class="main-nav" id="mainNav">
-        <a href="index.html">Home</a>
-        <a href="diensten.html">Diensten</a>
-        <a href="over.html" class="active">Over Ons</a>
-        <a href="contact.html">Contact</a>
-        <button class="btn-primary" onclick="openContactModal()">Plan consult</button>
-      </nav>
-
-      <button class="hamburger" id="hamburger" aria-label="Open menu">☰</button>
+<body data-theme="light">
+  <div id="transition-cover"></div>
+  <header class="navbar">
+    <a class="logo" href="index.html">Molunaire</a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="diensten.html">Diensten</a>
+      <a href="over.html" class="active">Over</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="theme-toggle" aria-label="Schakel thema"></button>
+      <button class="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
     </div>
   </header>
 
-  <main class="container section">
-    <h1 class="page-title">Over Ons</h1>
-    <div class="about-grid">
-      <div>
-        <h2>Onze visie</h2>
-        <p>Wij geloven in digitale ervaringen die niet alleen mooi zijn, maar betekenisvolle groei opleveren. Onze projecten combineren design, techniek en data.</p>
-      </div>
-      <div>
-        <h2>Ons team</h2>
-        <p>Een mix van senior designers, software engineers en growth-specialisten met jaren ervaring bij bureaus en scale-ups.</p>
-      </div>
-    </div>
+  <aside class="mobile-menu" aria-hidden="true">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="diensten.html">Diensten</a>
+      <a href="over.html" class="active">Over</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </aside>
 
-    <section class="leadership">
-      <h3>Leadership</h3>
-      <div class="people-grid">
-        <div class="person">
-          <img src="images/person1.jpg" alt="CEO" onerror="this.style.display='none'">
-          <h4>Naam CEO</h4>
-          <p>CEO & Co-founder</p>
+  <main>
+    <section class="page-header container">
+      <h1 class="reveal">Over Molunaire</h1>
+      <p class="reveal delay-1">Design, technologie en merkstrategie — samengebracht tot één luxe ervaring.</p>
+    </section>
+
+    <!-- Timeline -->
+    <section class="timeline container">
+      <div class="timeline-item reveal">
+        <span class="dot"></span>
+        <div>
+          <h3>Start</h3>
+          <p>De drang naar premium digitale kwaliteit.</p>
         </div>
-        <div class="person">
-          <img src="images/person2.jpg" alt="CTO" onerror="this.style.display='none'">
-          <h4>Naam CTO</h4>
-          <p>CTO & Head of Engineering</p>
+      </div>
+      <div class="timeline-item reveal delay-1">
+        <span class="dot"></span>
+        <div>
+          <h3>Scale</h3>
+          <p>Systemen, processen en een team dat het waarmaakt.</p>
         </div>
-        <div class="person">
-          <img src="images/person3.jpg" alt="CMO" onerror="this.style.display='none'">
-          <h4>Naam CMO</h4>
-          <p>Head of Growth</p>
+      </div>
+      <div class="timeline-item reveal delay-2">
+        <span class="dot"></span>
+        <div>
+          <h3>Impact</h3>
+          <p>Cases die merkwaarde en conversie verhogen.</p>
         </div>
+      </div>
+    </section>
+
+    <!-- Values -->
+    <section class="values full-bleed">
+      <div class="container values-grid">
+        <div class="value-card reveal">
+          <h4>Detail</h4>
+          <p>Van micro‑interacties tot typografie: niets is toevallig.</p>
+        </div>
+        <div class="value-card reveal delay-1">
+          <h4>Performance</h4>
+          <p>Snelheid en stabiliteit staan centraal.</p>
+        </div>
+        <div class="value-card reveal delay-2">
+          <h4>Consistentie</h4>
+          <p>Design systemen voor schaal en kwaliteit.</p>
+        </div>
+        <div class="value-card reveal delay-3">
+          <h4>Partnership</h4>
+          <p>We bouwen voor groei, niet voor de korte termijn.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team -->
+    <section class="team container">
+      <header class="section-head">
+        <h2>Team</h2>
+        <p>Creatieven en engineers die samen topwerk leveren.</p>
+      </header>
+      <div class="grid">
+        <article class="member reveal">
+          <img src="assets/team1.jpg" alt="Teamlid 1" loading="lazy" />
+          <h5>Lead Designer</h5>
+          <p>Cinematic UI, motion en systems.</p>
+        </article>
+        <article class="member reveal delay-1">
+          <img src="assets/team2.jpg" alt="Teamlid 2" loading="lazy" />
+          <h5>Senior Developer</h5>
+          <p>Architectuur, performance en security.</p>
+        </article>
+        <article class="member reveal delay-2">
+          <img src="assets/team3.jpg" alt="Teamlid 3" loading="lazy" />
+          <h5>Brand Strategist</h5>
+          <p>Merkidentiteit, tone en storytelling.</p>
+        </article>
+        <article class="member reveal delay-3">
+          <img src="assets/team4.jpg" alt="Teamlid 4" loading="lazy" />
+          <h5>Content Director</h5>
+          <p>Foto, video en copy die raakt.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta container">
+      <div class="cta-card reveal">
+        <h3>Werken met Molunaire</h3>
+        <p>We bouwen jouw digitale flagship — met luxe in elk detail.</p>
+        <a href="contact.html" class="btn btn-primary magnetic">Plan een kennismaking</a>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
+  <footer class="footer">
     <div class="container footer-grid">
       <div>
-        <h4>Mijn Bedrijf</h4>
-        <p>Premium digitale producten & services</p>
+        <h4>Molunaire</h4>
+        <p>Premium digitale experiences.</p>
       </div>
       <div>
-        <h4>Snelle links</h4>
+        <h4>Links</h4>
         <ul>
-          <li><a href="index.html">Home</a></li>
           <li><a href="diensten.html">Diensten</a></li>
+          <li><a href="over.html">Over</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
       <div>
         <h4>Contact</h4>
-        <p>Email: <a href="mailto:info@mijnbedrijf.com">info@mijnbedrijf.com</a></p>
+        <ul>
+          <li><a href="mailto:info@molunaire.com">info@molunaire.com</a></li>
+          <li>Venray, Limburg</li>
+        </ul>
       </div>
     </div>
-    <div class="footer-bottom">&copy; 2025 Mijn Bedrijf</div>
+    <div class="footer-bottom">
+      <span>&copy; 2025 Molunaire</span>
+      <div class="socials">
+        <a href="#">IG</a><a href="#">IN</a><a href="#">X</a>
+      </div>
+    </div>
   </footer>
 
-  <div class="modal" id="contactModal" aria-hidden="true">
-    <div class="modal-inner">
-      <button class="modal-close" onclick="closeContactModal()" aria-label="Close">✕</button>
-      <h3>Contact opnemen</h3>
-      <form id="contactForm" onsubmit="return submitContactForm(event)">
-        <div class="form-row">
-          <input type="text" id="name3" name="name" placeholder="Naam *" required>
-          <input type="email" id="email3" name="email" placeholder="E-mail *" required>
-        </div>
-        <textarea id="message3" name="message" rows="5" placeholder="Bericht..." required></textarea>
-        <div class="form-actions">
-          <button type="submit" class="btn-primary">Verstuur</button>
-        </div>
-        <div id="formStatus" class="form-status" role="status" aria-live="polite"></div>
-      </form>
-    </div>
-  </div>
-
-  <script src="js/script.js"></script>
+  <div class="cursor"></div>
 </body>
 </html>
 
