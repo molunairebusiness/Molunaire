@@ -1,54 +1,184 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Molunaire - Home</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mijn Bedrijf • Enterprise web oplossingen</title>
+
+  <!-- Google Font (kan) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css" />
+  <meta name="theme-color" content="#0f1724" />
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Wij bouwen websites die jouw bedrijf laten groeien</h1>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="diensten.html">Diensten</a>
-                <a href="over.html">Over Ons</a>
-                <a href="contact.html">Contact</a>
-            </nav>
-        </div>
-    </header>
+  <!-- Top bar -->
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div class="tagline">24/7 Support • SLA • Enterprise-grade security</div>
+      <div class="contact-short">Bel: <a href="tel:+31123456789">+31 12 345 6789</a></div>
+    </div>
+  </div>
 
-    <section class="hero">
-        <div class="container">
-            <h2>Professioneel, snel en betrouwbaar</h2>
-            <p>Van concept tot live website: wij helpen jouw bedrijf online succes te behalen.</p>
-            <button onclick="showMessage()">Neem contact op</button>
+  <!-- Header / Nav -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="images/logo.png" alt="Logo" class="logo" onerror="this.style.display='none'">
+        <div class="brand-text">
+          <div class="brand-name">Mijn Bedrijf</div>
+          <div class="brand-sub">Digital Experiences • Growth</div>
         </div>
-    </section>
+      </div>
 
-    <section class="features container">
-        <div class="feature">
-            <h3>Webdesign</h3>
-            <p>Moderne, responsive ontwerpen die indruk maken op klanten.</p>
-        </div>
-        <div class="feature">
-            <h3>Development</h3>
-            <p>Snelle, stabiele en veilige websites met de nieuwste technologieën.</p>
-        </div>
-        <div class="feature">
-            <h3>SEO & Marketing</h3>
-            <p>Zorg dat jouw website gevonden wordt door klanten en groeit in bezoekers.</p>
-        </div>
-    </section>
+      <nav class="main-nav" id="mainNav">
+        <a href="index.html" class="active">Home</a>
+        <a href="diensten.html">Diensten</a>
+        <a href="over.html">Over Ons</a>
+        <a href="contact.html">Contact</a>
+        <button class="btn-primary" onclick="openContactModal()">Plan consult</button>
+      </nav>
 
-    <footer>
-        <div class="container">
-            &copy; 2025 Mijn Bedrijf | <a href="contact.html">Contact</a>
-        </div>
-    </footer>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">☰</button>
+    </div>
+  </header>
 
-    <script src="js/script.js"></script>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <h1>Wij transformeren bedrijven met digitale perfectie</h1>
+        <p class="lead">Enterprise-grade websites, conversie-optimalisatie en schaalbare oplossingen die vertrouwen scheppen en omzet verhogen.</p>
+        <div class="hero-cta">
+          <button class="btn-primary" onclick="openContactModal()">Gratis consult</button>
+          <a href="diensten.html" class="btn-ghost">Bekijk diensten</a>
+        </div>
+
+        <ul class="trust-list">
+          <li>100+ projecten</li>
+          <li>99.99% uptime</li>
+          <li>ISO & GDPR-compliant</li>
+        </ul>
+      </div>
+
+      <div class="hero-visual">
+        <div class="card-stats">
+          <div><strong>+250%</strong><span>gem. omzetgroei klanten</span></div>
+          <div><strong>0.8s</strong><span>gem. paginalaadtijd</span></div>
+        </div>
+        <div class="hero-frame">
+          <!-- Suggest adding a hero image in images/hero.png -->
+          <img src="images/hero.png" alt="Dashboard preview" onerror="this.style.display='none'">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services preview -->
+  <section class="section section-services">
+    <div class="container">
+      <h2 class="section-title">Onze kernexpertises</h2>
+      <div class="services-grid">
+        <article class="service">
+          <h3>Enterprise Web Development</h3>
+          <p>Schaalbare architectuur, headless CMS-implementaties en snelle performantie.</p>
+        </article>
+        <article class="service">
+          <h3>Conversion & UX</h3>
+          <p>Data-gedreven optimalisatie zodat bezoekers klanten worden.</p>
+        </article>
+        <article class="service">
+          <h3>Platform Integraties</h3>
+          <p>API-koppelingen, CRM, betalingen en automatisering.</p>
+        </article>
+        <article class="service">
+          <h3>Security & Compliance</h3>
+          <p>Beveiliging, backups en privacy by design.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials slider -->
+  <section class="section section-testimonials">
+    <div class="container">
+      <h2 class="section-title">Wat klanten zeggen</h2>
+      <div class="carousel" id="testimonialCarousel">
+        <div class="slide active">
+          <blockquote>"Binnen 3 maanden verbeterde onze conversie met 80% — professioneel team."</blockquote>
+          <cite>— CEO, RetailCo</cite>
+        </div>
+        <div class="slide">
+          <blockquote>"Schaalbare architectuur, indrukwekkend resultaat en fijne samenwerking."</blockquote>
+          <cite>— CTO, FinServ</cite>
+        </div>
+        <div class="slide">
+          <blockquote>"Snelle oplevering, zeer communicatief en betrouwbare hosting."</blockquote>
+          <cite>— Marketing Director, HealthCorp</cite>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA strip -->
+  <section class="cta-strip">
+    <div class="container">
+      <h3>Klaar om te schalen? Plan een gratis strategy call.</h3>
+      <button class="btn-primary" onclick="openContactModal()">Plan een gratis consult</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>Mijn Bedrijf</h4>
+        <p>Premium digitale producten & services</p>
+      </div>
+      <div>
+        <h4>Snelle links</h4>
+        <ul>
+          <li><a href="diensten.html">Diensten</a></li>
+          <li><a href="over.html">Over ons</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>Email: <a href="mailto:info@mijnbedrijf.com">info@mijnbedrijf.com</a></p>
+        <p>Tel: <a href="tel:+31123456789">+31 12 345 6789</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2025 Mijn Bedrijf • Alle rechten voorbehouden
+    </div>
+  </footer>
+
+  <!-- Contact modal (JS-opened) -->
+  <div class="modal" id="contactModal" aria-hidden="true">
+    <div class="modal-inner">
+      <button class="modal-close" onclick="closeContactModal()" aria-label="Close">✕</button>
+      <h3>Plan een gratis consult</h3>
+      <form id="contactForm" onsubmit="return submitContactForm(event)">
+        <div class="form-row">
+          <input type="text" id="name" name="name" placeholder="Naam *" required>
+          <input type="email" id="email" name="email" placeholder="E-mail *" required>
+        </div>
+        <div class="form-row">
+          <input type="text" id="company" name="company" placeholder="Bedrijfsnaam">
+          <input type="tel" id="phone" name="phone" placeholder="Telefoon">
+        </div>
+        <textarea id="message" name="message" rows="5" placeholder="Vertel kort wat je nodig hebt..." required></textarea>
+        <div class="form-actions">
+          <button type="submit" class="btn-primary">Verstuur</button>
+          <button type="button" class="btn-ghost" onclick="closeContactModal()">Annuleren</button>
+        </div>
+        <div id="formStatus" class="form-status" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
 
