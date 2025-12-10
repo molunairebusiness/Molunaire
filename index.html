@@ -1,184 +1,204 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Mijn Bedrijf • Enterprise web oplossingen</title>
-
-  <!-- Google Font (kan) -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Molunaire — Luxe websites die indruk maken</title>
+  <meta name="description" content="Molunaire bouwt premium websites voor ambitieuze merken. Minimalistisch, innovatief en luxe." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
-  <meta name="theme-color" content="#0f1724" />
+  <link rel="icon" href="assets/favicon.svg" />
+  <script src="js/script.js" defer></script>
 </head>
-<body>
-  <!-- Top bar -->
-  <div class="topbar">
-    <div class="container topbar-inner">
-      <div class="tagline">24/7 Support • SLA • Enterprise-grade security</div>
-      <div class="contact-short">Bel: <a href="tel:+31123456789">+31 12 345 6789</a></div>
-    </div>
-  </div>
+<body data-theme="light">
+  <div id="transition-cover"></div>
 
-  <!-- Header / Nav -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="brand">
-        <img src="images/logo.png" alt="Logo" class="logo" onerror="this.style.display='none'">
-        <div class="brand-text">
-          <div class="brand-name">Mijn Bedrijf</div>
-          <div class="brand-sub">Digital Experiences • Growth</div>
-        </div>
-      </div>
-
-      <nav class="main-nav" id="mainNav">
-        <a href="index.html" class="active">Home</a>
-        <a href="diensten.html">Diensten</a>
-        <a href="over.html">Over Ons</a>
-        <a href="contact.html">Contact</a>
-        <button class="btn-primary" onclick="openContactModal()">Plan consult</button>
-      </nav>
-
-      <button class="hamburger" id="hamburger" aria-label="Open menu">☰</button>
+  <header class="navbar">
+    <a class="logo" href="index.html" aria-label="Molunaire home">Molunaire</a>
+    <nav class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="diensten.html">Diensten</a>
+      <a href="over.html">Over</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="theme-toggle" aria-label="Schakel thema"></button>
+      <button class="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </header>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="container hero-grid">
+  <aside class="mobile-menu" aria-hidden="true">
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="diensten.html">Diensten</a>
+      <a href="over.html">Over</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </aside>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero full-viewport">
+      <div class="hero-media parallax" data-depth="0.2">
+        <video class="hero-video" autoplay muted loop playsinline preload="auto">
+          <source src="assets/hero.mp4" type="video/mp4" />
+        </video>
+        <div class="hero-gradient"></div>
+      </div>
       <div class="hero-content">
-        <h1>Wij transformeren bedrijven met digitale perfectie</h1>
-        <p class="lead">Enterprise-grade websites, conversie-optimalisatie en schaalbare oplossingen die vertrouwen scheppen en omzet verhogen.</p>
+        <h1 class="reveal">We bouwen digitale ervaringen die luxe ademen.</h1>
+        <p class="reveal delay-1">Minimalistisch. Cinematic. Performance‑gedreven.</p>
         <div class="hero-cta">
-          <button class="btn-primary" onclick="openContactModal()">Gratis consult</button>
-          <a href="diensten.html" class="btn-ghost">Bekijk diensten</a>
-        </div>
-
-        <ul class="trust-list">
-          <li>100+ projecten</li>
-          <li>99.99% uptime</li>
-          <li>ISO & GDPR-compliant</li>
-        </ul>
-      </div>
-
-      <div class="hero-visual">
-        <div class="card-stats">
-          <div><strong>+250%</strong><span>gem. omzetgroei klanten</span></div>
-          <div><strong>0.8s</strong><span>gem. paginalaadtijd</span></div>
-        </div>
-        <div class="hero-frame">
-          <!-- Suggest adding a hero image in images/hero.png -->
-          <img src="images/hero.png" alt="Dashboard preview" onerror="this.style.display='none'">
+          <a href="diensten.html" class="btn btn-primary magnetic">Ontdek onze diensten</a>
+          <a href="#cases" class="btn btn-ghost">Bekijk cases</a>
         </div>
       </div>
-    </div>
-  </section>
+      <div class="scroll-indicator">Scroll</div>
+    </section>
 
-  <!-- Services preview -->
-  <section class="section section-services">
-    <div class="container">
-      <h2 class="section-title">Onze kernexpertises</h2>
-      <div class="services-grid">
-        <article class="service">
-          <h3>Enterprise Web Development</h3>
-          <p>Schaalbare architectuur, headless CMS-implementaties en snelle performantie.</p>
-        </article>
-        <article class="service">
-          <h3>Conversion & UX</h3>
-          <p>Data-gedreven optimalisatie zodat bezoekers klanten worden.</p>
-        </article>
-        <article class="service">
-          <h3>Platform Integraties</h3>
-          <p>API-koppelingen, CRM, betalingen en automatisering.</p>
-        </article>
-        <article class="service">
-          <h3>Security & Compliance</h3>
-          <p>Beveiliging, backups en privacy by design.</p>
-        </article>
+    <!-- MARQUEE -->
+    <section class="marquee">
+      <div class="marquee-track">
+        <span>Premium Design</span>
+        <span>Innovatieve Development</span>
+        <span>Brand Identity</span>
+        <span>Performance First</span>
+        <span>Premium Design</span>
+        <span>Innovatieve Development</span>
+        <span>Brand Identity</span>
+        <span>Performance First</span>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Testimonials slider -->
-  <section class="section section-testimonials">
-    <div class="container">
-      <h2 class="section-title">Wat klanten zeggen</h2>
-      <div class="carousel" id="testimonialCarousel">
-        <div class="slide active">
-          <blockquote>"Binnen 3 maanden verbeterde onze conversie met 80% — professioneel team."</blockquote>
-          <cite>— CEO, RetailCo</cite>
-        </div>
-        <div class="slide">
-          <blockquote>"Schaalbare architectuur, indrukwekkend resultaat en fijne samenwerking."</blockquote>
-          <cite>— CTO, FinServ</cite>
-        </div>
-        <div class="slide">
-          <blockquote>"Snelle oplevering, zeer communicatief en betrouwbare hosting."</blockquote>
-          <cite>— Marketing Director, HealthCorp</cite>
+    <!-- FEATURES -->
+    <section class="features container">
+      <article class="feature-card reveal">
+        <h3>Design</h3>
+        <p>Strak, minimalistisch en doelgericht met een premium gevoel.</p>
+      </article>
+      <article class="feature-card reveal delay-1">
+        <h3>Development</h3>
+        <p>Modern stack, snelle laadtijden, schaalbaar en betrouwbaar.</p>
+      </article>
+      <article class="feature-card reveal delay-2">
+        <h3>Branding</h3>
+        <p>Merkidentiteit die consistent en onderscheidend aanvoelt.</p>
+      </article>
+      <article class="feature-card reveal delay-3">
+        <h3>Content</h3>
+        <p>Fotografie, video en copy die je verhaal scherp neerzet.</p>
+      </article>
+    </section>
+
+    <!-- CASES GRID -->
+    <section id="cases" class="cases container">
+      <header class="section-head">
+        <h2>Case studies</h2>
+        <p>Een selectie van projecten voor merken die vooruit willen.</p>
+      </header>
+      <div class="grid">
+        <a class="case reveal" href="#" aria-label="Case 1">
+          <img src="assets/case1.jpg" alt="Case 1" loading="lazy" />
+          <div class="case-info">
+            <h4>Arcadia</h4>
+            <p>Premium e‑commerce met micro‑interacties.</p>
+          </div>
+        </a>
+        <a class="case reveal delay-1" href="#" aria-label="Case 2">
+          <img src="assets/case2.jpg" alt="Case 2" loading="lazy" />
+          <div class="case-info">
+            <h4>Novum</h4>
+            <p>Corporate site met cinematic storytelling.</p>
+          </div>
+        </a>
+        <a class="case reveal delay-2" href="#" aria-label="Case 3">
+          <img src="assets/case3.jpg" alt="Case 3" loading="lazy" />
+          <div class="case-info">
+            <h4>Helio</h4>
+            <p>Landing pages, high conversion & design system.</p>
+          </div>
+        </a>
+        <a class="case reveal delay-3" href="#" aria-label="Case 4">
+          <img src="assets/case4.jpg" alt="Case 4" loading="lazy" />
+          <div class="case-info">
+            <h4>Oxide</h4>
+            <p>Tech brand refresh met dark mode perfection.</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials full-bleed">
+      <div class="container">
+        <header class="section-head">
+          <h2>Wat klanten zeggen</h2>
+        </header>
+        <div class="testimonial-track">
+          <blockquote class="testimonial reveal">
+            “Molunaire leverde een site die onze brand naar een hoger niveau tilt.”
+            <cite>— CEO, Arcadia</cite>
+          </blockquote>
+          <blockquote class="testimonial reveal delay-1">
+            “Design, snelheid en detail. Je voelt de luxe in elke interactie.”
+            <cite>— Marketing Lead, Novum</cite>
+          </blockquote>
+          <blockquote class="testimonial reveal delay-2">
+            “De perfecte balans tussen minimalisme en impact.”
+            <cite>— Founder, Helio</cite>
+          </blockquote>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CTA strip -->
-  <section class="cta-strip">
-    <div class="container">
-      <h3>Klaar om te schalen? Plan een gratis strategy call.</h3>
-      <button class="btn-primary" onclick="openContactModal()">Plan een gratis consult</button>
-    </div>
-  </section>
+    <!-- CTA -->
+    <section class="cta container">
+      <div class="cta-card reveal">
+        <h3>Klaar voor een premium site?</h3>
+        <p>Plan een call en ontdek hoe jouw merk luxe kan uitstralen.</p>
+        <a href="contact.html" class="btn btn-primary magnetic">Plan een kennismaking</a>
+      </div>
+    </section>
+  </main>
 
-  <!-- Footer -->
-  <footer class="site-footer">
+  <footer class="footer">
     <div class="container footer-grid">
       <div>
-        <h4>Mijn Bedrijf</h4>
-        <p>Premium digitale producten & services</p>
+        <h4>Molunaire</h4>
+        <p>Wij bouwen digitale ervaringen die indruk maken.</p>
       </div>
       <div>
-        <h4>Snelle links</h4>
+        <h4>Links</h4>
         <ul>
           <li><a href="diensten.html">Diensten</a></li>
-          <li><a href="over.html">Over ons</a></li>
+          <li><a href="over.html">Over</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
       <div>
         <h4>Contact</h4>
-        <p>Email: <a href="mailto:info@mijnbedrijf.com">info@mijnbedrijf.com</a></p>
-        <p>Tel: <a href="tel:+31123456789">+31 12 345 6789</a></p>
+        <ul>
+          <li><a href="mailto:info@molunaire.com">info@molunaire.com</a></li>
+          <li>Venray, Limburg</li>
+        </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      &copy; 2025 Mijn Bedrijf • Alle rechten voorbehouden
+      <span>&copy; 2025 Molunaire. Alle rechten voorbehouden.</span>
+      <div class="socials">
+        <a href="#" aria-label="Instagram">IG</a>
+        <a href="#" aria-label="LinkedIn">IN</a>
+        <a href="#" aria-label="Twitter/X">X</a>
+      </div>
     </div>
   </footer>
 
-  <!-- Contact modal (JS-opened) -->
-  <div class="modal" id="contactModal" aria-hidden="true">
-    <div class="modal-inner">
-      <button class="modal-close" onclick="closeContactModal()" aria-label="Close">✕</button>
-      <h3>Plan een gratis consult</h3>
-      <form id="contactForm" onsubmit="return submitContactForm(event)">
-        <div class="form-row">
-          <input type="text" id="name" name="name" placeholder="Naam *" required>
-          <input type="email" id="email" name="email" placeholder="E-mail *" required>
-        </div>
-        <div class="form-row">
-          <input type="text" id="company" name="company" placeholder="Bedrijfsnaam">
-          <input type="tel" id="phone" name="phone" placeholder="Telefoon">
-        </div>
-        <textarea id="message" name="message" rows="5" placeholder="Vertel kort wat je nodig hebt..." required></textarea>
-        <div class="form-actions">
-          <button type="submit" class="btn-primary">Verstuur</button>
-          <button type="button" class="btn-ghost" onclick="closeContactModal()">Annuleren</button>
-        </div>
-        <div id="formStatus" class="form-status" role="status" aria-live="polite"></div>
-      </form>
-    </div>
-  </div>
-
-  <script src="js/script.js"></script>
+  <div class="cursor"></div>
 </body>
 </html>
+
 
